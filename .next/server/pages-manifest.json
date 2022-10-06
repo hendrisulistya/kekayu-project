@@ -1,0 +1,21 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html",
+  "/about": "pages/about.html",
+  "/api/hello": "pages/api/hello.js",
+  "/blog/detail": "pages/blog/detail.html",
+  "/blog": "pages/blog.html",
+  "/contact": "pages/contact.html",
+  "/faq": "pages/faq.html",
+  "/how-we-work": "pages/how-we-work.html",
+  "/": "pages/index.html",
+  "/pricing": "pages/pricing.html",
+  "/project/detail": "pages/project/detail.html",
+  "/project": "pages/project.html",
+  "/quote": "pages/quote.html",
+  "/service/detail": "pages/service/detail.html",
+  "/service": "pages/service.html",
+  "/term-of-service": "pages/term-of-service.html"
+}
