@@ -1,44 +1,55 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/kekayu.png"
 
-export default function Navbar() {
+function Navbar() {
     return (
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3">
-      <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-        <div className="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
-          <Link to='/' className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
-          KEKAYU PROJECT
-          </Link>
-          <button className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button">
-            <span className="block relative w-6 h-px rounded-sm bg-white"></span>
-            <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
-            <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
-          </button>
-        </div>
-        <div className="lg:flex flex-grow items-center" id="example-navbar-warning">
-          <ul className="flex flex-col lg:flex-row list-none ml-auto">
-              <li className="nav-item">
-                <Link to='/about' className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-               <Link to='/contact' className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
-                  Contact
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to='/gallery' className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
-                  Gallery
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to='/teams' className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
-                  Our Team
-                </Link>
-              </li>
-          </ul>
-        </div>
-      </div>
+    // <nav className="bg-blue-500">
+    //   <div className="md:flex items-center justify-between">
+    //   <div className="logo text-white font-bold p-2">KEKAYU PROJECT</div>
+    //   <ul className="md:flex md:items-center">
+    //   {[
+    //     ['Home', '/'],
+    //     ['About', '/about'],
+    //     ['Gallery', '/gallery'],
+    //     ['Our Team', '/teams'],
+    //   ].map(([title, endPoint]) => (
+    //     <li>
+    //     <Link to={endPoint} className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">{title}</Link>
+    //     </li>
+    //   ))}
+    //   </ul>
+    //   </div>
+    // </nav>
+    <div>
+    <nav className="bg-white border-blue-500">
+    <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+        <a href="/" className="flex items-center">
+            <img src={logo} className="h-6 mr-3 sm:h-9" alt="Logo" />
+        </a>
+
+    </div>
     </nav>
+    <nav className="bg-blue-500 text-white">
+    <div className="max-w-screen-xl px-4 py-3 mx-auto md:px-6">
+        <div className="flex items-center">
+            <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
+            {[
+    ['Home', '/'],
+         ['Gallery', '/gallery'],
+         ['Team', '/teams'],
+         ['Contact us', '/contact'],
+       ].map(([title, endPoint]) => (
+         <li>
+         <Link to={endPoint} className="dark:text-white hover:underline">{title}</Link>
+         </li>
+       ))}
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
     );
 }
+
+export default Navbar;

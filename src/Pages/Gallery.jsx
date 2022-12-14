@@ -1,35 +1,41 @@
-import { useState, useEffect } from "react";
-import ImageCard from "../components/ImageCard";
-import ImageSearch from "../components/ImageSearch";
+import img1 from "../assets/img1.jpeg"
+import img2 from "../assets/img2.jpeg"
+import img3 from "../assets/img3.jpeg"
+import img4 from "../assets/img4.jpeg"
+import img5 from "../assets/img5.jpeg"
+import img6 from "../assets/img6.jpeg"
 
 function Gallery() {
-  const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [term, setTerm] = useState('');
-
-  useEffect(() => {
-    fetch(`https://pixabay.com/api/?key=30434469-29422f9e76113000ae48c3183&q=${term}&image_type=photo&pretty=true`)
-    .then(response => response.json())
-    .then(data => {
-      setImages(data.hits);
-      setIsLoading(false);
-    })
-    .catch(err => console.log(err));
-  }, [term]);
 
   return (
-    <div className="container mx-auto">
-      <ImageSearch searchText = {(text) => setTerm(text)} />
-
-      {!isLoading && images.length === 0 && <h1 className="text-5xl text-center mx-auto mt-32">No Images Found</h1>}
-
-      {isLoading ? <h1 className="text-6xl text-center mx-auto mt-32">Loading...</h1> 
-      : <div className="grid grid-cols-3 gap-4">
-        {images.map(image => (
-          <ImageCard key = {image.id} image = {image} />
-        ))}
-      </div>}
+    <div className="overflow-hidden text-gray-700">
+  <div className="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
+    <div className="flex flex-wrap -m-1 md:-m-2">
+      <div className="flex flex-wrap w-1/2">
+      <div className="w-1/2 p-1 md:p-2">
+      <img className="block object-cover object-center w-full h-full rounded-lg"src={img1}/>
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+        <img className="block object-cover object-center w-full h-full rounded-lg"src={img2}/>
+        </div>
+        <div class="w-full p-1 md:p-2">
+        <img className="block object-cover object-center w-full h-full rounded-lg"src={img3}/>
+        </div>
+      </div>
+      <div className="flex flex-wrap w-1/2">
+        <div className="w-full p-1 md:p-2">
+          <img className="block object-cover object-center w-full h-full rounded-lg"src={img4}/>
+        </div>
+        <div className="w-1/2 p-1 md:p-2">
+          <img className="block object-cover object-center w-full h-full rounded-lg" src={img5} />
+        </div>
+        <div className="w-1/2 p-1 md:p-2">
+          <img className="block object-cover object-center w-full h-full rounded-lg" src={img6} />
+        </div>
+      </div>
     </div>
+  </div>
+</div>
   );
 }
 
