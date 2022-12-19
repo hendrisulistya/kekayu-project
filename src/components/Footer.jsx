@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
-    <footer className='text-center lg:text-left text-blue-600'>
-      <div className='flex justify-center items-center lg:justify-between p-6 border-b border-blue-300'>
+    <footer className='text-center lg:text-left text-red-600'>
+      <div className='flex justify-center items-center lg:justify-between p-6 border-b border-red-300'>
         <div className='mr-12 hidden lg:block'></div>
         <div className='flex justify-center'>
           <a
             href='http://facebook.com/kekayuproject'
-            className='mr-6 text-blue-600'
+            className='mr-6 text-red-600'
           >
             <svg
               aria-hidden='true'
@@ -28,7 +28,7 @@ export default function Navbar() {
           </a>
           <a
             href='http://twitter.com/kekayuproject'
-            className='mr-6 text-blue-600'
+            className='mr-6 text-red-600'
           >
             <svg
               aria-hidden='true'
@@ -47,8 +47,8 @@ export default function Navbar() {
             </svg>
           </a>
           <a
-            href='http://instagram.com/kekayuproject'
-            className='mr-6 text-blue-600'
+            href='http://instagram.com/kekayu_project'
+            className='mr-6 text-red-600'
           >
             <svg
               aria-hidden='true'
@@ -68,7 +68,7 @@ export default function Navbar() {
           </a>
           <a
             href='http://linkedin.com/in/kekayuproject'
-            className='mr-6 text-blue-600'
+            className='mr-6 text-red-600'
           >
             <svg
               aria-hidden='true'
@@ -89,9 +89,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className='text-center p-6 bg-blue-200'>
+      <div className='text-center p-6 bg-red-200'>
         <span>© 2023 </span>
-        <a className='text-blue-600 font-semibold' href='#'>
+        <a className='text-red-600 font-semibold' href='#'>
           Kekayu Project
         </a>
       </div>
